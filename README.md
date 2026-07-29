@@ -15,3 +15,13 @@ Quel est le montant de départ? 25
 Quelle est la devise d'arrivée (3 lettres)? gbp
 
 Avec 25.0 EUR, vous obtenez 21.409 GBP
+
+#### Ce que j'ai appris
+À faire attention à l'orthographe (request avec un s etc..)
+À appeler une API
+Convertir la réponse en dico
+
+##### Améliorations
+Intégrer d'autres devises
+Créer interface web
+Avoir une sortie de secours (si API ne répond plus ou change de lien) 
