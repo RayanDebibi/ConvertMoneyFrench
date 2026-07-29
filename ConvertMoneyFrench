@@ -1,7 +1,10 @@
 import requests
+site_0 = requests.get("https://api.frankfurter.dev/v1/currencies")
+devises_acceptees = site_0.json()
 
 
-def message_depart():
+def message_depart(devises_acceptees):
+    print(f"Voici les devises acceptées {devises_acceptees}")
     print("Quelle est la devise de départ")
     devise_depart = input().upper()
     print("Quel est le montant de départ")
