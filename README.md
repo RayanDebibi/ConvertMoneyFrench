@@ -47,3 +47,7 @@ Pour lancer le programme :
 - Créer une interface web
 - Avoir une sortie de secours (si l'API ne répond plus ou change de lien)
 - Le programme plante si on tape du texte au lieu d'un nombre
+
+## IA
+
+J'ai écrit ce programme moi-même. Je me suis fait aider pour la syntaxe que je ne connaissais pas encore.
