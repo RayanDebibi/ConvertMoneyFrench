@@ -44,7 +44,6 @@ Pour lancer le programme :
 ## Améliorations
 
 - Intégrer d'autres devises
-- Créer une interface web
 - Avoir une sortie de secours (si l'API ne répond plus ou change de lien)
 - Le programme plante si on tape du texte au lieu d'un nombre
 
