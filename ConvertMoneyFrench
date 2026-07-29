@@ -1,0 +1,11 @@
+import requests
+
+
+def message_depart():
+    print("Quelle est la devise de départ")
+    devise_depart = input().upper()
+    print("Quel est le montant de départ")
+    montant_depart = float(input())
+    print("Quelle est la devise d'arrivée")
+    devise_arrivee = input().upper()
+    return devise_depart, montant_depart, devise_arrivee
