@@ -4,6 +4,7 @@ J'ai crée mon deuxième programme en Python. Un convertisseur de devises(unique
 Le programme demande la liste des devises qu'il à l'API Frankfurter puis il demande la devise de départ ainsi que le montant et la devise d'arrivée
 Il vérifie que les 2 devises sont bien des devises compatibles avec l'API et que le montant est postif si ce n'est pas le cas il renvoie des messages difflrents pour chaque problème.
 Il demande le montant_finl convertis à l'API et l'affiche pour l'utilisateur.
+J'ai égallement laisser Bolt generé une interface avec mon code Python : https://currency-converter-u-hy2e.bolt.host
 ## Comment lancer
 
 Il faut installer Python 3 et requests :
