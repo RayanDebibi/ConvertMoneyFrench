@@ -19,7 +19,11 @@ def message_depart(devises_acceptees):
         if lettre in montant_depart1:
             print("Le montant de départ doit avoir uniquement des nombres.")
             exit()
-    montant_depart = float(montant_depart1)
+    try:
+        montant_depart = float(montant_depart1)
+    except ValueError:
+        print("Vérifie le nombre stp ( pas de , mais .)")
+        exit()
     print("Quelle est la devise d'arrivée (3lettres) ?")
     devise_arrivee = input().upper()
     return devise_depart, montant_depart, devise_arrivee
@@ -38,7 +42,11 @@ def verification_erreurs(devise_depart, montant_depart, devise_arrivee, devises_
 
 
 def demande_site(devise_depart, montant_depart, devise_arrivee):
-    donnes = requests.get(f"https://api.frankfurter.dev/v1/latest?amount={montant_depart}&from={devise_depart}&to={devise_arrivee}").json()
+    try:
+        donnes = requests.get(f"https://api.frankfurter.dev/v1/latest?amount={montant_depart}&from={devise_depart}&to={devise_arrivee}").json()
+    except requests.exceptions.RequestException:
+        print("Impossible de contacter le serveur, vérifie stp ta connexion ou l'état de FrankFruster")
+        exit()
     montant_final = donnes["rates"][devise_arrivee]
     print(f"Avec {montant_depart} {devise_depart}, vous obtenez {montant_final} {devise_arrivee}")
 
