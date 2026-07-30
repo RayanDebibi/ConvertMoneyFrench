@@ -1,5 +1,7 @@
 import requests
 
+alphabet = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ".lower())
+
 site_0 = requests.get("https://api.frankfurter.dev/v1/currencies")
 devises_acceptees = site_0.json()
 
@@ -8,8 +10,16 @@ def message_depart(devises_acceptees):
     print(f"Voici les devises acceptées {devises_acceptees}")
     print("Quelle est la devise de départ (3 lettres)?")
     devise_depart = input().upper()
-    print("Quel est le montant de départ?")
-    montant_depart = float(input())
+    print("Quel est le montant de départ? (Utilisez . et pas ,)")
+    montant_depart1 = input()
+    if len(montant_depart1) == 0:
+        print("Le montant de départ doit contenir quelque chose")
+        exit()
+    for lettre in alphabet:
+        if lettre in montant_depart1:
+            print("Le montant de départ doit avoir uniquement des nombres.")
+            exit()
+    montant_depart = float(montant_depart1)
     print("Quelle est la devise d'arrivée (3lettres) ?")
     devise_arrivee = input().upper()
     return devise_depart, montant_depart, devise_arrivee
