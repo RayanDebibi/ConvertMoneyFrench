@@ -45,7 +45,7 @@ Pour lancer le programme :
 
 - Intégrer d'autres devises
 - Avoir une sortie de secours (si l'API ne répond plus ou change de lien)
-- Le programme plante si on tape du texte au lieu d'un nombre
+- Essayer de faire le programme en git local (À apprendre)
 
 ## IA
 
