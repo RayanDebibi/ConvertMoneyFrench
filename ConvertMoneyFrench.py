@@ -2,9 +2,13 @@ import requests
 
 alphabet = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ".lower())
 
-site_0 = requests.get("https://api.frankfurter.dev/v1/currencies")
-devises_acceptees = site_0.json()
-
+try:
+    site_0 = requests.get("https://api.frankfurter.dev/v1/currencies")
+    except requests.exceptions.RequestException:
+        print("Impossible de contacter le serveur, vérifie stp ta connexion ou l'état de Frankfurter")
+        exit()
+    devises_acceptees = site_0.json()
+    
 
 def message_depart(devises_acceptees):
     print(f"Voici les devises acceptées {devises_acceptees}")
